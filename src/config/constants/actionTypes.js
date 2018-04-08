@@ -1,0 +1,8 @@
+export const ME_REQUEST = 'ME_REQUEST'
+export const ME_REQUEST_SUCCESS = 'ME_REQUEST_SUCCESS'
+
+export const REQUEST_START = 'REQUEST_START'
+export const REQUEST_END = 'REQUEST_END'
+
+export const ALERT_ERROR = 'ALERT_ERROR'
+export const ALERT_SUCCESS = 'ALERT_SUCCESS'

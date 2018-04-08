@@ -1,0 +1,66 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./src/config/initializers/tests.js"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "yarn test",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-placeholder": "^2.0.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "redux": "^3.7.2",
+    "redux-persist": "^5.9.1",
+    "redux-saga": "^0.16.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "eject": "react-scripts eject",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "coverage": "node node_modules/jest/bin/jest.js --coverage",
+    "lint": "./node_modules/.bin/eslint . --fix; exit 0",
+    "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma none --write \"src/**/*.js\"",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "prettier": "^1.11.1"
+  }
+}

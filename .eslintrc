@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "import",
+    "react",
+    "standard"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": [2, "never"],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "space-before-function-paren": 0,
+    "generator-star-spacing": 0
+  },
+  "globals": {
+    "alert": true,
+    "fetch": true,
+    "URL": true
+  },
+  "env": {
+    "jest": true
+  }
+}
